@@ -1,27 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
+// Import de componentes criados
+import HelloWorld from "./componentes/HelloWorld";
+import SayMyName from './componentes/SayMyName';
+import Pessoa from './componentes/Pessoa';
+import List from './componentes/List';
+
 function App() {
-  const name= "Batman";
-  let a = 1;
-  let b = 2;
-
-  function sum(a, b){
-  
-    return a +b;
-
-  }
-
-const url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUSU1AUL-ZTT8FTkMiSfQGaPvZN9MQkDLnNA&s";
-
-return(
-  <div className='App'>
-    <p>Testando o Jsx</p>
-    <p>Olá {name}</p>
-    <p>Soma é {sum(1,2)}</p>
-    <img src='{url}'alt='informação da imagem'></img>
-  </div>
-)
+  return(
+    <div className='App'>
+      <HelloWorld />
+      <SayMyName nome="Edir Pereira" />
+      <SayMyName nome="Pedro Guimarães" />
+      <SayMyName nome="FRancisco Chagas" />
+      <Pessoa
+        nome="Rodrigo"
+        idade="25"
+        profissao="Programador"
+        foto="http://abrindoportas.tec.br/assets/perfil.png"
+      />
+      <List />
+    </div>
+  );
 
 }
 
